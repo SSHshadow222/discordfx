@@ -1,0 +1,196 @@
+.text-field{
+    -fx-background-color: #202225;
+    -fx-text-fill: LIGHTGRAY;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 18px;
+}
+
+.label{
+    -fx-text-fill: LIGHTGRAY;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 14px;
+}
+
+.separator .line{
+    -fx-background-color: #202225;
+    -fx-pref-height: 1.5;
+    -fx-opacity: 75%;
+    -fx-border-color: NONE;
+}
+
+.scroll-pane .viewport{
+    -fx-background-color: TRANSPARENT;
+}
+
+.scroll-pane{
+    -fx-background-color: TRANSPARENT;
+}
+
+.button{
+    -fx-background-color: TRANSPARENT;
+    -fx-text-fill: LIGHTGRAY;
+    -fx-font-family: "Calibri";
+    -fx-content-display: RIGHT TOP;
+    -fx-font-size: 18px;
+}
+
+.button:hover{
+    -fx-background-color: #454950;
+    -fx-text-fill: WHITE;
+}
+
+.list-view{
+    -fx-background-color: TRANSPARENT;
+    -fx-border-color: #202225;
+    -fx-border-radius: 10px;
+    -fx-padding: 10;
+}
+
+.list-view .list-cell{
+    -fx-background-color: TRANSPARENT;
+    -fx-border-radius: 10px;
+    -fx-padding: 10;
+}
+
+.list-view .list-cell:filled:hover{
+    -fx-background-color: #454950;
+    -fx-background-radius: 10px;
+    -fx-border-color: LIGHTGRAY;
+}
+
+.scroll-bar{
+    -fx-background-color: TRANSPARENT;
+    -fx-padding: 0;
+}
+
+.scroll-bar:vertical .track{
+    -fx-background-color: #2f3136;
+    -fx-border-color: TRANSPARENT;
+    -fx-background-radius: 30px;
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color: TRANSPARENT;
+    -fx-background-radius: 0;
+    -fx-padding: 0 10 0 0;
+
+}
+
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding: 0 0.15;
+}
+
+.scroll-bar:horizontal .increment-button ,
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color: TRANSPARENT;
+    -fx-background-radius: 0;
+    -fx-padding: 0 10 0 0;
+
+}
+
+.scroll-bar:horizontal .increment-arrow,
+.scroll-bar:horizontal .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding: 0 0.15;
+}
+
+.scroll-bar .thumb{
+    -fx-background-color: #202225;
+    -fx-background-radius: 30px;
+}
+
+.context-menu{
+    -fx-background-color: #202225;
+}
+
+.menu-item{
+    -fx-padding: 15;
+}
+
+.menu-item .label{
+    -fx-text-fill: WHITE;
+    -fx-font-weight: BOLD;
+}
+
+.menu-item:focused{
+    -fx-background-color: #4e5ad9;
+}
+
+#buttonFriendsLeft{
+    -fx-background-image: url("../../image/PersonLightgray48x48.png");
+    -fx-background-size: 20 20;
+    -fx-background-position: 10;
+    -fx-background-repeat: NO-REPEAT;
+    -fx-padding: 10 10 10 45;
+}
+
+#buttonFriendsLeft:hover{
+    -fx-background-image: url("../../image/PersonWhite48x48.png");
+}
+
+#buttonFriendsLeft .label{
+    -fx-padding: 50 15 15 15;
+}
+
+#buttonAddFriend{
+    -fx-background-color: GREEN;
+    -fx-font-family: Calibri;
+    -fx-font-weight: BOLD;
+    -fx-text-fill: WHITE;
+}
+
+#buttonAddFriend:hover{
+    -fx-background-color: DARKGREEN;
+}
+
+#layoutLoggedUser{
+    -fx-padding: 15;
+}
+
+#textFieldSearchMain{
+    -fx-background-image: url("../../image/Magnifier32x32.png");
+    -fx-background-repeat: NO-REPEAT;
+    -fx-background-position: 99% 50%;
+    -fx-background-size: 15;
+}
+
+#labelRequests{
+    -fx-padding: 0 5 0 5;
+    -fx-font-weight: BOLD;
+    -fx-text-fill: WHITE;
+    -fx-background-color: RED;
+    -fx-background-radius: 15px;
+}
+
+#textFieldSearchAddFriend{
+    -fx-padding: 12.5;
+    -fx-font-size: 18px;
+}
+
+#buttonSendFriendRequest{
+    -fx-text-fill: WHITE;
+    -fx-background-color: #4e5ad9;
+}
+
+#buttonSendFriendRequest:hover{
+    -fx-background-color: #454fbe;
+}
+
+#buttonLogout, #buttonSettings{
+    -fx-padding: 10;
+}
+
+#textFieldSendMessage{
+    -fx-background-color: #454950;
+    -fx-font-size: 18px;
+    -fx-padding: 12.5 12.5 12.5 12.5;
+    -fx-background-radius: 7.5;
+}
+
+#labelFriendUsername{
+    -fx-text-fill: WHITE;
+    -fx-font-size: 18px;
+}

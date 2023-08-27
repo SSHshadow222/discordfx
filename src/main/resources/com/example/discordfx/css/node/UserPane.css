@@ -1,0 +1,14 @@
+.label{
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-text-fill: LIGHTGRAY;
+}
+
+#labelUsername{
+    -fx-font-size: 14px;
+    -fx-text-fill: WHITE;
+}
+
+#labelId{
+    -fx-opacity: 50%;
+}

@@ -1,0 +1,15 @@
+.button{
+    -fx-background-color: #4e5ad9;
+    -fx-text-fill: #ffffff;
+}
+.button:hover{
+    -fx-background-color: #454fbe;
+}
+
+#labelForgotPasswd:hover{
+    -fx-underline: true;
+}
+
+#labelRegister:hover{
+    -fx-underline: true;
+}

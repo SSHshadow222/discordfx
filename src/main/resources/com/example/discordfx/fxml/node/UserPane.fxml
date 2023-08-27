@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="VBox"
+         stylesheets="@../../css/node/UserPane.css"
+         xmlns:fx="http://javafx.com/fxml"
+         xmlns="http://javafx.com/javafx">
+    <HBox>
+        <ImageView fx:id="imageView" fitHeight="40" preserveRatio="true">
+            <Image url="@../../image/Discord512x512.png"/>
+        </ImageView>
+        <VBox>
+            <HBox.margin>
+                <Insets left="15" />
+            </HBox.margin>
+            <HBox spacing="2.5">
+                <HBox.margin>
+                    <Insets bottom="5" />
+                </HBox.margin>
+                <Label fx:id="labelUsername"
+                       text="Username" />
+                <Label fx:id="labelId"
+                       text="#0000" />
+            </HBox>
+            <Label fx:id="labelAge"
+                   text="Age: "/>
+            <Label fx:id="labelEmail"
+                   text="Email: "/>
+            <Label fx:id="labelPhone"
+                   text="Phone No: "/>
+        </VBox>
+    </HBox>
+</fx:root>

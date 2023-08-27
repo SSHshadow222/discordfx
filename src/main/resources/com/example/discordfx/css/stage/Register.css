@@ -1,0 +1,48 @@
+.combo-box .list-cell{
+    -fx-background-color: #202225;
+    -fx-text-fill: lightgray;
+    -fx-font-family: Arial;
+    -fx-font-size: 15;
+}
+
+.combo-box .list-cell:hover{
+    -fx-background-color: #33373b;
+}
+
+.combo-box .list-cell:selected{
+    -fx-background-color: #4e5ad9;
+    -fx-text-fill: white;
+}
+
+.combo-box-base{
+    -fx-background-color: #4e5ad9;
+}
+
+.combo-box-base .scroll-bar{
+    -fx-background-color: #202225;
+}
+
+.combo-box:hover{
+    -fx-cursor: hand;
+}
+
+#labelTermsOfService:hover{
+    -fx-underline: true;
+}
+
+#labelAlreadyHaveAccount:hover{
+    -fx-underline: true;
+}
+
+.check-box:hover{
+    -fx-cursor: hand;
+}
+
+.button{
+    -fx-background-color: #4e5ad9;
+    -fx-text-fill: #ffffff;
+}
+.button:hover{
+    -fx-background-color: #454fbe;
+    -fx-cursor: hand;
+}

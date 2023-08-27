@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ListView?>
+
+<?import com.example.discordfx.utils.javafx.node.UserPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<HBox minHeight="800.0"
+      minWidth="1400.0"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      stylesheets="@../../css/stage/Logged.css"
+      onMouseClicked="#handleGlobalMouseClicked"
+      fx:controller="com.example.discordfx.controller.Logged">
+   <VBox minWidth="350"
+         style="-fx-background-color: #2f3136;">
+      <TextField fx:id="textFieldSearchDm"
+                 promptText="Search for direct messages"
+                 focusTraversable="false">
+         <VBox.margin>
+            <Insets left="15" right="15" top="15" bottom="15"/>
+         </VBox.margin>
+      </TextField>
+      <Separator>
+         <VBox.margin>
+            <Insets bottom="15"/>
+         </VBox.margin>
+      </Separator>
+      <Button fx:id="buttonFriendsLeft"
+              text="Friends"
+              HBox.hgrow="ALWAYS"
+              maxWidth="1.7976931348623157E308"
+              prefHeight="50"
+              alignment="CENTER_LEFT"
+              onMouseClicked="#handleButtonFriendsLeftClicked">
+         <VBox.margin>
+            <Insets left="10" right="10" bottom="15"/>
+         </VBox.margin>
+      </Button>
+      <Label text="DIRECT MESSAGES">
+         <VBox.margin>
+            <Insets left="30" right="10" bottom="15"/>
+         </VBox.margin>
+      </Label>
+      <ListView fx:id="listViewPrivateMessages" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets left="10" right="10" bottom="15"/>
+         </VBox.margin>
+      </ListView>
+      <AnchorPane fx:id="layoutLoggedUser"
+                  maxWidth="1.7976931348623157E308"
+                  style="-fx-background-color: #292b2f">
+         <UserPane fx:id="userLabelLoggedUser"
+                   AnchorPane.topAnchor="0"
+                   AnchorPane.leftAnchor="0"
+                   AnchorPane.bottomAnchor="0"
+                   alignment="CENTER_LEFT"/>
+         <HBox AnchorPane.topAnchor="0"
+               AnchorPane.bottomAnchor="0"
+               AnchorPane.rightAnchor="0"
+               alignment="CENTER_RIGHT"
+               VBox.vgrow="ALWAYS"
+               spacing="10" >
+            <Button fx:id="buttonSettings">
+               <graphic>
+                  <ImageView fitHeight="25" preserveRatio="true">
+                     <Image url="@../../image/Settings128x128.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="buttonLogout"
+                    maxHeight="1.7976931348623157E308"
+                    onMouseClicked="#handleLogout">
+               <graphic>
+                  <ImageView fitHeight="25" preserveRatio="true">
+                     <Image url="@../../image/ExitGray128x128.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+         </HBox>
+
+      </AnchorPane>
+   </VBox>
+   <StackPane HBox.hgrow="ALWAYS">
+      <!-- Friendship's Layout -->
+      <VBox fx:id="layoutFriends"
+            style="-fx-background-color: #36393f">
+         <HBox spacing="15">
+            <VBox.margin>
+               <Insets top="15" bottom="15" left="15"/>
+            </VBox.margin>
+            <Button fx:id="buttonFriendsTop"
+                    text="Friends"
+                    focusTraversable="false"
+                    onMouseClicked="#handleFriends">
+            </Button>
+            <Button fx:id="buttonRequests"
+                    text="Requests"
+                    focusTraversable="false"
+                    onMouseClicked="#handleRequests">
+               <graphic>
+                  <Label fx:id="labelRequests"
+                         text="10" />
+               </graphic>
+            </Button>
+            <Button fx:id="buttonAddFriend"
+                    text="Add Friend"
+                    focusTraversable="false"
+                    onMouseClicked="#handleAddFriend"/>
+         </HBox>
+         <Separator>
+            <VBox.margin>
+               <Insets bottom="10"/>
+            </VBox.margin>
+         </Separator>
+         <StackPane maxHeight="1.7976931348623157E308"
+                    VBox.vgrow="ALWAYS">
+            <padding>
+               <Insets topRightBottomLeft="15"/>
+            </padding>
+            <StackPane>
+               <VBox fx:id="layoutListViews">
+                  <TextField fx:id="textFieldSearchMain"
+                             promptText="Search..."
+                             focusTraversable="false">
+                     <VBox.margin>
+                        <Insets bottom="15" />
+                     </VBox.margin>
+                  </TextField>
+                  <StackPane VBox.vgrow="ALWAYS">
+                     <ListView fx:id="listViewRequests"
+                               visible="false" />
+                     <ListView fx:id="listViewFriends" />
+                  </StackPane>
+               </VBox>
+               <ImageView fx:id="imageViewNoFriends"
+                          fitHeight="350"
+                          preserveRatio="true"
+                          visible="false">
+                  <Image url="@../../image/NoFriends.png" />
+               </ImageView>
+               <ImageView fx:id="imageViewNoRequests"
+                          fitHeight="270"
+                          preserveRatio="true"
+                          visible="false">
+                  <Image url="@../../image/NoRequest.png" />
+               </ImageView>
+            </StackPane>
+            <StackPane fx:id="layoutAddFriend"
+                  visible="false">
+               <VBox spacing="15">
+                  <Label text="ADD FRIEND"
+                         style="-fx-font-size: 22px;
+                          -fx-font-weight: BOLD;
+                          -fx-text-fill: WHITE"/>
+                  <Label text="You need the username, as well as the tag. Remember that the username is case-sensitive and can contain only one space!" />
+                  <AnchorPane>
+                     <TextField fx:id="textFieldSearchAddFriend"
+                                promptText="Example: ShyGuy#0097"
+                                AnchorPane.rightAnchor="0"
+                                AnchorPane.leftAnchor="0"
+                                AnchorPane.topAnchor="0"
+                                AnchorPane.bottomAnchor="0"
+                                onKeyPressed="#handleTextFieldSearchAddFriendKeyPressed"
+                                focusTraversable="false">
+                     </TextField>
+                     <Button fx:id="buttonSendFriendRequest"
+                             text="Send a friend request"
+                             disable="true"
+                             AnchorPane.topAnchor="12.5"
+                             AnchorPane.bottomAnchor="12.5"
+                             AnchorPane.rightAnchor="12.5"
+                             alignment="CENTER_RIGHT"
+                             onMouseClicked="#handleSendFriendRequest"/>
+                  </AnchorPane>
+                  <Separator />
+                  <StackPane VBox.vgrow="ALWAYS">
+                     <ListView fx:id="listViewPendings"
+                               visible="false"
+                               VBox.vgrow="ALWAYS"/>
+                     <ImageView fx:id="imageViewNoPendings"
+                                fitHeight="350"
+                                preserveRatio="true"
+                                visible="false">
+                        <Image url="@../../image/NoPendings.png" />
+                     </ImageView>
+                  </StackPane>
+               </VBox>
+            </StackPane>
+         </StackPane>
+      </VBox>
+      <!-- Private Messages Layout -->
+      <VBox fx:id="layoutPrivateMessage"
+            visible="false"
+            style="-fx-background-color: #36393f">
+         <HBox spacing="5">
+            <VBox.margin>
+               <Insets top="20" bottom="21" right="20" left="20" />
+            </VBox.margin>
+            <Label text="\@"
+                   style="-fx-font-size: 20px" />
+            <Label fx:id="labelFriendUsername"
+                   text="Username" />
+         </HBox>
+         <Separator />
+         <ScrollPane fx:id="scrollPaneMessages"
+                     fitToWidth="true"
+                    VBox.vgrow="ALWAYS">
+            <VBox.margin>
+               <Insets topRightBottomLeft="20" />
+            </VBox.margin>
+            <VBox fx:id="layoutMessages"
+                  spacing="15" />
+         </ScrollPane>
+         <TextField fx:id="textFieldSendMessage"
+                    promptText="Send message on @Username"
+                    onKeyPressed="#handleMessageSenderKeyPressed">
+            <VBox.margin>
+               <Insets topRightBottomLeft="15" />
+            </VBox.margin>
+         </TextField>
+      </VBox>
+   </StackPane>
+</HBox>
