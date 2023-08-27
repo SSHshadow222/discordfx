@@ -127,8 +127,7 @@ public class Register extends Controller {
 
     @FXML
     public void handleTermsOfService() throws IOException {
-        File file = new File("src/main/resources/com/example/lab6/html/TermsOfService.html");
-        Desktop.getDesktop().browse(file.toURI());
+        System.out.println("Terms of service");
     }
     // endregion
 
