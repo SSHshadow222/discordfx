@@ -43,5 +43,3 @@ You can log in to the application using the following default user account:
 
 - **Email/Phone No:** user
 - **Password:** user
-
-<img align="right" src="https://github.com/SSHshadow222/discordfx/assets/113729758/8b0c7853-ab4b-4538-9107-6903f1b26d73)">
