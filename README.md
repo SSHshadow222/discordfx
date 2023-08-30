@@ -2,7 +2,7 @@
 
 DiscordFX is a mock JavaFX-based chat application similar to Discord (in terms of design). This was originally a school project that intended to create a minimalistic chat application.
 
-## Installtion
+## Installation
 
 You can follow these steps to set up and run the project on your local machine.
 
@@ -43,3 +43,5 @@ You can log in to the application using the following default user account:
 
 - **Email/Phone No:** user
 - **Password:** user
+
+<img align="right" src="https://github.com/SSHshadow222/discordfx/assets/113729758/8b0c7853-ab4b-4538-9107-6903f1b26d73)">
