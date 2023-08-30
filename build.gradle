@@ -1,23 +1,21 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
     id 'org.beryx.jlink' version '2.25.0'
 }
 
 group 'com.example'
 version '1.0-SNAPSHOT'
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
 repositories {
     mavenCentral()
 }
-
-ext {
-    junitVersion = '5.8.2'
-}
-
-sourceCompatibility = '17'
-targetCompatibility = '17'
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
@@ -25,22 +23,16 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'com.example.discordfx'
+    mainClass = 'com.example.discordfx.Main'
 }
 
 javafx {
-    version = '17.0.2'
+    version = '17'
     modules = ['javafx.controls', 'javafx.fxml']
 }
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
-
     implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.42.0.1'
-}
-
-test {
-    useJUnitPlatform()
 }
 
 jlink {
