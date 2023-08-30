@@ -22,7 +22,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         URL fxmlUrl = getClass().getResource("fxml/stage/Login.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(fxmlUrl);
-
+        
         Pane layout = fxmlLoader.load();
         double minWidth = layout.getMinWidth(),
                 minHeight = layout.getMinHeight();
